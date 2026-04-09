@@ -19,5 +19,60 @@ let termo = document.getElementById("termo").checked;
 
 let cpfCadrastrados = ["125678900", "11111111111"]
 
-if (nome.length<3) return alert ("Nome Invalido");
+if (nome.length < 3) return alert("Nome Inválido");
+if (!email.includes("@")) return alert("Email Inválido");
+if (telefone.length < 8) return alert("Telefone Inválido");
+if (cpf == "") return alert("CPF Obrigatório");
+if (cpfCadastrados.includes(cpf)) return alert("CPF já cadastrado");
+if (idade < 18) return alert("Deve ser maior de 18!");
+if (cidade == "") return alert("Cidade obrigatória");
+if (moradia == "") return alert("Moradia");
+if (!quintal) return alert("Informe sobre Quintal!");
+if (!pet) return alert("Informe se ja teve pet!");
+if (horas == "" || isNaN(horas)) return alert("Horas Inválidas");
+if (motivo.length < 10) return alert("Motivo muito curto!");
+if (!termo) return alert("Aceite os termos para adoção!");
+
+// regra de negocio
+
+if (moradia == "apartamento" && quintal.value == "sim") {
+  return alert("Apartamento não pode ter quintal!");
+}
+
+if (moradia == "apartamento" && !permite) {
+  return alert("Apartamento não permite animais!");
+}
+
+if (moradia == "casa" && !seguro) {
+  return alert("Informe se o quintal é seguro!");
+}
+
+if (horas > 8) {
+  return alert("Animal ficará muito tempo sozinho!");
+}
+
+if (pet.value == "nao") {
+  return alert("A ONG poderá acompanhar sua adaptação!");
+}
+
+let motivosInvalidos = ["quero", "porque sim"];
+if (motivosInvalidos.includes(motivo.toLowerCase())) {
+  return alert("Motivo inválido");
+}
+
+if (!financeiro) {
+  return alert("Sem condições financeiras");
+}
+
+if (impulso) {
+  return alert("Cuidado com sua decisão impulsiva");
+}
+
+document.getElementById("resultado").innerHTML =
+  "Cadastro realizado com sucesso!<br>" +
+  "Nome: " + nome + "<br>" +
+  "Email: " + email + "<br>" +
+  "Telefone: " + telefone + "<br>" +
+  "Cidade: " + cidade;
+
 });
