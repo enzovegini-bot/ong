@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+   background-image: url(assets/Cachorros-juntos.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h2 {
+  color: rgb(70, 68, 68);
+  margin-bottom: 10px;
+}
+
+form {
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+}
+
+input, select, textarea {
+  width: 50%;
+  padding: 2px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #574fd6;
+}
+
+#resultado {
+  margin-top: 20px;
+  color: #2e7d32;
+  background: #e6ffe6;
+  padding: 10px;
+  border-radius: 8px;
+}
